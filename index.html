@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VF+SHV Energy Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Contact Us</h1>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="firstName">First name</label>
+                <!-- <input type="text" id="firstName" name="firstName" required> -->
+                <input type="text" id="firstName" name="firstName">
+            </div>
+            <div class="form-group">
+                <label for="surname">Surname</label>
+                <input type="text" id="surname" name="surname">
+            </div>
+            <div class="form-group">
+                <label for="organisation">Organisation</label>
+                <input type="text" id="organisation" name="organisation">
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone number</label>
+                <input type="tel" id="phone" name="phone">
+                <div id="phoneError" class="error-message"></div>
+            </div>
+            <div class="form-group form-group-full">
+                <label for="email">Email address*</label>
+                <!-- <input type="email" id="email" name="email" required> -->
+                <input type="email" id="email" name="email">
+            </div>
+            <div class="form-group form-group-full">
+                <textarea id="message" name="message" rows="4" placeholder="Your message" required></textarea>
+                <p class="hint-text">Your message will be analysed by artificial intelligence</p>
+            </div>
+            <button type="submit">Send</button>
+        </form>
+        <div id="loadingSpinner" class="spinner" style="display: none;"></div>
+        <div id="responseContainer"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

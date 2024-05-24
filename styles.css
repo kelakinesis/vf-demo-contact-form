@@ -1,0 +1,104 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+}
+
+.container {
+  width: 70%;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: left;
+  color: #333;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group-full {
+  grid-column: span 2;
+}
+
+label {
+  margin-bottom: 5px;
+  color: #333;
+}
+
+input, select, textarea {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1em;
+}
+
+select {
+  color: gray;
+}
+
+textarea {
+  resize: vertical;
+  font-family: Arial, sans-serif;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #DF2B2A;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: auto;
+  display: inline-block;
+  font-size: 1em;
+  margin: 3px;
+}
+
+button:hover {
+  background-color: #801e1e;
+}
+
+.error-message {
+  font-size: 0.8em;
+  color: #DF2B2A;
+}
+
+.hint-text {
+  font-size: 0.8em;
+  color: gray;
+  margin-top: 0;
+}
+
+.spinner {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 2s linear infinite;
+  margin: 20px auto; /* Center the spinner */
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
